@@ -4,13 +4,14 @@ document.getElementById('textForm').addEventListener('submit', function(e) {
     // Get the user input text
     const userText = document.getElementById('userText').value;
     
-    // Display the text in the paragraph element
+    // Display the text in the output container
     const displayText = document.getElementById('displayText');
     displayText.textContent = userText;
-    
+
     // Show the display text area
-    displayText.style.display = 'block';
-    
+    const outputContainer = document.querySelector('.output-container');
+    outputContainer.style.display = 'block';
+
     // Clear the input area
     document.getElementById('userText').value = '';
 });
