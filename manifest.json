@@ -4,6 +4,16 @@
     "manifest_version": 3,
     "action":{
         "default_popup": "popup.html"
-    } 
+    },
+"background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+"permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+
         
 }
