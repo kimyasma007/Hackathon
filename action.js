@@ -2,8 +2,9 @@ document.getElementById('textForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get the user input text
-    const userText = document.getElementById('userText').value;
-    
+    document.getElementById('userText').addEventListener('input', function(event) {
+        console.log('Text input:', event.target.value);
+    });
     // Display the text in the output container
     const displayText = document.getElementById('displayText');
     displayText.textContent = userText;
