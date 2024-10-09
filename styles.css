@@ -1,135 +1,69 @@
-/* Basic reset and box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*importing inter google font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-    height: 100vh;
+.body{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: linear-gradient(120deg, #f6d365, #fda085);
 }
 
-/* Container for the form card */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.popup_extension  {
+   
     width: 100%;
-    height: 100%;
-}
-
-/* Card styling */
-.card {
-    background-color: white;
-    width: 400px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
+    background-color: #fff;
     overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+.chathead{
+    display: flex;
+    align-items: center;
+    background: #5350C4;
+    padding: 15px 22px;
+    justify-content: space-between;
 }
 
-h1 {
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
+.chathead .chatinfo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-/* Input Container for textarea */
-.input-container {
-    position: relative;
-    margin-bottom: 30px;
+.chatinfo .chatbot-logo{
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    fill:#5350C4;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 50%;
 }
 
-/* styles.css */
-textarea {
-    pointer-events: auto; 
-    z-index: 1; 
-    width: 100%; 
-    height: 100px; 
-    padding: 10px; 
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-    box-sizing: border-box; 
+.chatinfo .logo-text{
+    color: #fff;
+    font-size: 1.31rem;
+    font-weight: 600;
 }
 
-textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 165, 255, 0.3);
-}
-
-textarea::placeholder {
-    color: #999;
-}
-
-.input-highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #00A5FF, #00FFA5);
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-textarea:focus + .input-highlight {
-    opacity: 1;
-}
-
-/* Send button */
-.send-btn {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #00A5FF, #00FFA5);
+.chathead #close-button{
     border: none;
-    border-radius: 50px;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    font-size: 1.9rem;
+    margin-right: 10px;
+    padding-top: 2px;
     cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
-    z-index: 1;
-}
-
-.send-btn:hover {
-    background: linear-gradient(135deg, #0075ff, #00cc75);
-    box-shadow: 0 5px 15px rgba(0, 165, 255, 0.3);
-}
-
-.output-container {
-    margin-top: 20px;
-    text-align: left;
-    display: none;
-}
-
-.output-text {
-    font-size: 18px;
-    background-color: #e8f5e9;
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: #333;
-    box-shadow: 0 5px 15px rgba(0, 255, 165, 0.2);
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Fade-in animation for output text */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    border-radius: 50%;
+    background: #5350C4;
 }
